@@ -1755,6 +1755,8 @@
 
         pointer.addClass('rz-active');
 
+        this.sliderElem.addClass('moved')
+
         if (this.options.keyboardSupport)
           this.focusElement(pointer);
 
@@ -1809,6 +1811,9 @@
           this.maxH.removeClass('rz-active');
           this.tracking = '';
         }
+
+        this.sliderElem.removeClass('moved');
+
         this.dragging.active = false;
 
         $document.off(moveEventName, ehMove);
